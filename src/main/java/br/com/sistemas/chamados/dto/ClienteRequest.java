@@ -15,4 +15,4 @@ public record ClienteRequest(
 
     @Size(max = 20, message = "Telefone deve ter no máximo 20 caracteres")
     String telefone
-){}
+) { }

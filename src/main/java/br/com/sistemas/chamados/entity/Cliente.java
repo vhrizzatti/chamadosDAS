@@ -9,23 +9,23 @@ import jakarta.persistence.Table;
 
 /** ENTITY: representa a tabela do banco. Cada objeto = uma linha. */
 @Entity
-@Table(name="clientes")
+@Table(name = "clientes")
 public class Cliente {
-    
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false, length=100)
+    @Column(nullable = false, length = 100)
     private String nome;
 
-    @Column(nullable=false, unique=true, length=120)
+    @Column(nullable = false, unique = true, length = 120)
     private String email;
 
-    @Column(length=20)
+    @Column(length = 20)
     private String telefone;
 
-    public Cliente() {}
+    public Cliente() { }
 
     public Cliente(String nome, String email, String telefone) {
         this.nome = nome;
@@ -35,7 +35,7 @@ public class Cliente {
 
     public Long getId() { return id; }
     public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome;}
+    public void setNome(String nome) { this.nome = nome; }
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
     public String getTelefone() { return telefone; }
